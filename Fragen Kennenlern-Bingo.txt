@@ -1,0 +1,135 @@
+	Religiös bist
+	Über 1,83m groß bist
+	Unter 1,83m groß bist
+	Single bist
+	Nicht Single bist
+	Poloshirts nicht leiden kannst
+	vegan/vegetarisch bist
+	Laktoseintolerant bist
+	schon mal etwas anderes studiert hast
+	Noch nie studiert hast
+	unter 20 bist
+	Zwischen 20 und 25 bist
+	Zwischen 25 und 30 bist
+	Über 30 bist
+	3 oder mehr Sprachen sprichst
+	Französischunterricht in der Schule hattest
+	Lateinunterricht in der Schule hattest
+	Blond bist
+	Brünett bist
+	Rothaarig bist
+	Blaue Augen hast
+	Grüne Augen hast
+	Braune Augen hast
+	Schon mal suspendiert wurdest
+	In einem Test oder Klausur mehr als 100% erreicht hast
+	Ein Iphone hast
+	Ein android-Handy hast
+	Je aktiv Linux benutzt hast
+	Schon mal etwas programmiert hast
+	Raucher bist (Shisha zählt!)
+	Nichtraucher bist (Shisha zählt!)
+	Schon mal zum Direktor geschickt wurdest
+	Mindestens eine Schwester hast
+	Mindestens einen Bruder hast
+	Im Sommer Geburtstag hast
+	Einen zweiten Vornamen hast
+	Ein Haustier hast
+	Angst vor Spinnen hast
+	Angst vor Insekten hast
+	Angst vor Schlangen hast
+	Eine Brille trägst
+	Schwimmen kannst
+	Nicht schwimmen kannst
+	Linkshänder bist
+	In einem anderen Land geboren wurdest
+	Schonmal Außerhalb von Europa gelebt hast
+	Katzen mehr magst als Hunde
+	Hunde mehr magst als Katzen
+	Keinen Führerschein hast
+	Weißt, wo dein Shirt/Oberteil produziert wurde
+	(ein bisschen) singen kannst
+	Schon mal Ärger mit der Polizei hattest
+	Noch nie einen Strafzettel bekommen hast
+	Ein Tattoo hast
+	Ein Piercing hast
+	Gerne/gut kochst
+	Gerne/gut backst
+	Malen kannst
+	Schonmal Bungee-jumpen warst
+	Schonmal Kanu/Kayak gefahren bist
+	Schonmal deine Haare gefärbt hast
+	Das Integral (von 1 bis 2, (2x dx) Lösen kannst 
+	Weißt, wie hoch g ca ist (Erdbeschleunigung)
+	Schonmal eine Nacht durchgearbeitet hast
+	Weißt, was Valorant ist
+	Schon mal Portal gespielt hast
+	Pokémon gespielt hat
+	Animal Crossing gespielt hat
+	Einen Discord-Account hast
+	Vor einem Jahr wusstest, was die app "Signal" ist
+	Noch nie ein ganzes Buch (von Anfang bis Ende) gelesen hast
+	Physik nicht magst
+	Schonmal einen Stromschlag bekommen hast
+	Kinder hast
+	Schonmal einen Baum gefällt hast
+	Noch nie ein Möbelstück selbst zusammengebaut hast
+	Schonmal eine Giraffe gesehen hast
+	Introvertiert bist
+	Einen Drucker hast
+	Dir schon mal etwas gebrochen hast
+	Weißt, welche Ordnungszahl Aluminium hat
+	Gerne deutsche Musik hörst
+	Deutsches Essen am liebsten magst
+	Schonmal Nachhilfe gegeben hast
+	Weniger Wasser als … trinkst
+	Schonmal eine ganze Geschichte geschrieben hast
+	Einen Job hast/hattest
+	Noch nie in einer Bibliothek (außer unserer!) warst
+	Schon Koffein-abhängig bist
+	Jemanden an diesem Tisch süß findest (du musst sagen, wen!)
+	Keinen Kaffee magst
+	Schonmal mit Delfinen schwimmen warst
+	Lieber Kpop als Metal hörst
+	Weißt, welche die 7 Todsünden sind
+	Noch nie Alkohol getrunken hast
+	Noch nie einen Hangover hattest
+	Weißt, was "mis en place" bedeutet
+	Aktiv Fußball schaust
+	Weißt, welcher der dritte Buchstabe des griechischen Alphabets ist
+	Die Teletubbies geschaut hast
+	Game of Thrones gesehen hast
+	Gerne Anime schaust
+	Schonmal tauchen warst
+	Schonmal mit Krücken laufen musstest
+	Weißt, was ein Defibrillator macht
+	Schon eine Ausbildung/fertiges Studium hast
+	Deine Lieblingsfarbe blau ist
+	Deine Lieblingsfarbe grün ist
+	Deine Lieblingsfarbe rot ist
+	Fußball (im Verein) spielst
+	Handball (im Verein) spielst
+	Tennis (im Verein) spielst
+	Aus Gelsenkirchen und Umgebung kommst
+	Für das Studium hier her gezogen bist
+	Schon einmal ein Studium angefangen hast
+	Beerpong gespielt hat
+	Gitarre spielen kannst
+	Klavier spielen kannst
+	Ein Blasinstrument spielen kannst
+	Alle Bundesländer aufzählen kann
+	Eine Sammlung hat
+	Ein Instagram Profil hast
+	Ins Fitnessstudio geht
+	Weißt, welches Sternzeichen du hast
+	Ein Motorrad hast
+	Surfen kannst
+	Schonmal Skifahren/ Snowboarden warst
+	Für Prüfungen immer Wochen vorher anfängst zu lernen
+	Noch nie auf einem Konzert/ Festival warst
+	In einer WG wohnst
+	Lieber abends als morgens duscht
+	Schon einmal ein Puzzle fertig gepuzzelt hast
+	Die Planeten der Reihe nach aufzählen kannst
+	Normalerweise vor Mitternacht schlafen gehst
+	Weißt, was dein Name bedeutet
