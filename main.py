@@ -88,7 +88,6 @@ def text(text, content):
         text.insert('end', content[i])
 
 
-
 shuffle(cf)
 disp = display(df)
 
@@ -97,14 +96,28 @@ root.title("Kennlernbingo<3")
 root.geometry("700x1000")
 frm = tk.Frame(root)
 frm.grid()
-tk.Label(frm, text="").grid(column=0, row=0, padx=30, pady=20)
-tk.Label(frm, text="Mögliche Auswahl:\n", font=('times', 15)).grid(column=1, row=0)
+
+def draw_num():
+    Numfield = tk.Toplevel(root)
+    Numfield.title("Die Nummer ist:")
+    Numfield.geometry("500x500")
+    root.withdraw
+    num = np.random.randint(1,51)
+    Input = T.get(1.0,'end')
+    print(Input)
+
+tk.Label(frm, text="").grid(column=0, row=0, padx=20, )
+tk.Label(frm, text="Mögliche Auswahl:\n", font=('times', 15)).grid(column=1, row=1)
 T = tk.Text(frm, width=75, height=53 )
 text(T, disp)
-T.grid(column=1,row=1)
+T.grid(column=1,row=2)
 tk.Button(frm,
           text="Mischen",
           command=lambda: [shuffle(cf),text(T,display(df))]
-          ).grid(column=1, row=2)
-
+          ).grid(column=1, row=3)
+tk.Button(frm, text = "Nummer",
+          command=draw_num,
+          ).grid(column=1,row=5)
+f_input = tk.Entry(frm, width=100)
+f_input.grid(column=1,row=4,columnspan=2)
 root.mainloop()
