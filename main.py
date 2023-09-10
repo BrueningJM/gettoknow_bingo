@@ -1,19 +1,22 @@
 import tkinter as tk
 import numpy as np
 
+cf = "Kennenlernen/Fragen Kennenlern-Bingo.txt"
+df = "Kennenlernen/display.txt"
+
 def display(filename):
     list = []
     f = open(filename, "r")
     list= f.readlines()
-    print(list)
+    #print(list)
     f.close()
     list = fix_string(list)
     return list
 
-def shuffle():
+def shuffle(filename):
     display = []
     lines = []
-    f = open("Kennenlernen/Fragen Kennenlern-Bingo.txt","r")
+    f = open(filename,"r")
     lines = f.readlines()
     f.close()
     licount = len(lines)
@@ -25,9 +28,13 @@ def shuffle():
         newline = newline.replace("\t", "")
         newline = str(n+1) + ". " + newline
         #print(newline)
-        if newline not in display:
+        if newline in display:
+            print(newline)
+            continue
+        else:
             display.append(newline)
             n += 1
+            print(n)
 
     #print(display)
     f = open("Kennenlernen/display.txt", "w")
@@ -38,7 +45,7 @@ def shuffle():
 
 def fix_string(list):
     count = len(list)
-    print(count)
+    #print(count)
     for i in range(0,count):
         #fix für ä
         if "Ã¤" in list[i]:
@@ -78,10 +85,12 @@ def text(text, content):
     inscount = len(content)
     text.delete(1.0,'end')
     for i in range(0, inscount):
-        text.insert('end', disp[i])
+        text.insert('end', content[i])
 
-shuffle()
-disp = display("Kennenlernen/display.txt")
+
+
+shuffle(cf)
+disp = display(df)
 
 root = tk.Tk()
 root.title("Kennlernbingo<3")
@@ -90,10 +99,12 @@ frm = tk.Frame(root)
 frm.grid()
 tk.Label(frm, text="").grid(column=0, row=0, padx=30, pady=20)
 tk.Label(frm, text="Mögliche Auswahl:\n", font=('times', 15)).grid(column=1, row=0)
-T = tk.Text(frm, width=70, height=53 )
+T = tk.Text(frm, width=75, height=53 )
 text(T, disp)
 T.grid(column=1,row=1)
-tk.Button(frm, text="Mischen", command=shuffle).grid(column=1, row=2)
-
+tk.Button(frm,
+          text="Mischen",
+          command=lambda: [shuffle(cf),text(T,display(df))]
+          ).grid(column=1, row=2)
 
 root.mainloop()
