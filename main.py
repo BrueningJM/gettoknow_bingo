@@ -101,8 +101,11 @@ def draw_num():
     Numfield = tk.Toplevel(root)
     Numfield.title("Die Nummer ist:")
     Numfield.geometry("500x500")
-    root.withdraw
+    fra = tk.Frame(Numfield)
+    fra.grid()
+    root.withdraw()
     num = np.random.randint(1,51)
+    tk.Label(fra,text =str(num),font=('times', 15)).grid(column=1, row=1)
     Input = T.get(1.0,'end')
     print(Input)
 
