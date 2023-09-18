@@ -79,7 +79,7 @@ def fix_string(list):
         if "ÃŸ" in list[i]:
             list[i] = list[i].replace("ÃŸ","ß")
             #print(list[i])
-        #Dieses eine behinderte e ws Vasi unbedingt bei Pokemon einfügen musste AHHHHHHH
+        #Dieses eine behinderte e was Dustin unbedingt bei Pokemon einfügen musste AHHHHHHH
         if "Ã©" in list[i]:
             list[i] = list[i].replace("Ã©","é")
             #print(list[i])
