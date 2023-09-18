@@ -1,5 +1,6 @@
 import tkinter as tk
 import numpy as np
+import time
 
 cf = "Kennenlernen/Fragen Kennenlern-Bingo.txt"
 df = "Kennenlernen/display.txt"
@@ -31,10 +32,13 @@ def shuffle(filename):
         if newline in display:
             print(newline)
             continue
+        elif newline == "":
+            print(newline)
+            continue
         else:
             display.append(newline)
             n += 1
-            print(n)
+            #print(n)
 
     #print(display)
     f = open("Kennenlernen/display.txt", "w")
@@ -93,34 +97,72 @@ disp = display(df)
 
 root = tk.Tk()
 root.title("Kennlernbingo<3")
-root.geometry("700x1000")
+root.geometry("700x1000+650+0")
 frm = tk.Frame(root)
 frm.grid()
 
 def draw_num():
     Numfield = tk.Toplevel(root)
     Numfield.title("Die Nummer ist:")
-    Numfield.geometry("500x500")
-    fra = tk.Frame(Numfield)
-    fra.grid()
-    root.withdraw()
+    Numfield.geometry("600x600+700+250")
+    #fra.grid()
     num = np.random.randint(1,51)
-    tk.Label(fra,text =str(num),font=('times', 15)).grid(column=1, row=1)
+
     Input = T.get(1.0,'end')
-    print(Input)
+    Input = Input.split("\n")
+    for k in Input:
+        if (str(num) + ".") in k:
+            temp = k.replace((str(num) + "."),"")
+            n = 0
+            disp_att = ""
+            for l in temp:
+                disp_att += l
+                if n > 24 and l == " " :
+                    disp_att += "\n"
+                    n= 0
+                n += 1
+                #print(n)
+            break
+        else:
+            continue
+
+
+    tk.Label(Numfield, text=str(num), font=('times', 70)).place(x=250,y=20)
+    tk.Label(Numfield, text=str(disp_att), font=('times', 25)).place(x=50,y=225)
+
+    tk.Button(Numfield,
+              text="OK",
+              font=('times',30),
+              command=lambda: [Numfield.withdraw()],
+              ).place(x=250,y=400)
+    time.sleep(0.5)
+
+def take_input():
+    Add = f_input.get()
+    print(Add)
+    Add = "	" + Add + "\n"
+    f = open(cf,"a")
+    f.write(Add)
+    f.close()
 
 tk.Label(frm, text="").grid(column=0, row=0, padx=20, )
-tk.Label(frm, text="Mögliche Auswahl:\n", font=('times', 15)).grid(column=1, row=1)
-T = tk.Text(frm, width=75, height=53 )
+tk.Label(frm, text="Mögliche Auswahl:\n", font=('times', 15)).grid(column=1, row=1,columnspan=2)
+T = tk.Text(frm, width=75, height=51 )
 text(T, disp)
-T.grid(column=1,row=2)
+T.grid(column=1,row=2,columnspan=4)
 tk.Button(frm,
           text="Mischen",
-          command=lambda: [shuffle(cf),text(T,display(df))]
-          ).grid(column=1, row=3)
-tk.Button(frm, text = "Nummer",
+          command=lambda: [shuffle(cf),text(T,display(df))],
+          font=('times', 15)
+          ).grid(column=1, row=3, pady=5)
+tk.Button(frm, text="Nummer",
           command=draw_num,
-          ).grid(column=1,row=5)
+          font=('times', 15)
+          ).grid(column=2,row=3,pady=5)
 f_input = tk.Entry(frm, width=100)
-f_input.grid(column=1,row=4,columnspan=2)
+f_input.grid(column=1,row=4,columnspan=3)
+tk.Button(frm, text = "  Dazu  ",
+          command=take_input,
+          font=('times', 15)
+          ).grid(column=1,row=5)
 root.mainloop()
