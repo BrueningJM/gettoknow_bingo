@@ -98,8 +98,14 @@ disp = display(df)
 root = tk.Tk()
 root.title("Kennlernbingo<3")
 root.geometry("700x1000+650+0")
+scrollbar = tk.Scrollbar(root,orient=tk.VERTICAL)
 frm = tk.Frame(root)
+
 frm.grid()
+
+
+scrollbar.grid(row=0,column=3,rowspan=5)
+#scrollbar.config(command=frm.yview)
 
 def draw_num():
     Numfield = tk.Toplevel(root)
@@ -145,7 +151,7 @@ def take_input():
     f.write(Add)
     f.close()
 
-tk.Label(frm, text="").grid(column=0, row=0, padx=20, )
+tk.Label(frm, text="").grid(column=0,row=0, padx=20)
 tk.Label(frm, text="Mögliche Auswahl:\n", font=('times', 15)).grid(column=1, row=1,columnspan=2)
 T = tk.Text(frm, width=75, height=51 )
 text(T, disp)
@@ -165,4 +171,8 @@ tk.Button(frm, text = "  Dazu  ",
           command=take_input,
           font=('times', 15)
           ).grid(column=1,row=5)
+
+
+
+
 root.mainloop()
