@@ -98,14 +98,22 @@ disp = display(df)
 root = tk.Tk()
 root.title("Kennlernbingo<3")
 root.geometry("700x1000+650+0")
-scrollbar = tk.Scrollbar(root,orient=tk.VERTICAL)
-frm = tk.Frame(root)
 
+fra = tk.Frame(root)
+fra.pack(fill=tk.BOTH, expand=1)
+mycanvas = tk.Canvas(fra)
+mycanvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+scrollbar = tk.Scrollbar(fra,orient=tk.VERTICAL,command=mycanvas.yview())
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+mycanvas.configure(yscrollcommand=scrollbar.set)
+mycanvas.bind('<Configure>', lambda e: mycanvas.configure(scrollregion=mycanvas.bbox("all")))
+
+frm = tk.Frame(mycanvas)
+mycanvas.create_window((0,0), window=frm,anchor="nw")
 frm.grid()
 
 
-scrollbar.grid(row=0,column=3,rowspan=5)
-#scrollbar.config(command=frm.yview)
+
 
 def draw_num():
     Numfield = tk.Toplevel(root)
