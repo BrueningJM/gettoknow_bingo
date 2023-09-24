@@ -87,7 +87,7 @@
 	Einen Job hast/hattest
 	Noch nie in einer Bibliothek (außer unserer!) warst
 	Schon Koffein-abhängig bist
-	Jemanden an diesem Tisch süß findest (du musst sagen, wen!)
+	Jemanden an diesem Tisch süß findest (du musst nicht sagen, wen!)
 	Keinen Kaffee magst
 	Schonmal mit Delfinen schwimmen warst
 	Lieber Kpop als Metal hörst
@@ -134,4 +134,5 @@
 	Normalerweise vor Mitternacht schlafen gehst
 	Weißt, was dein Name bedeutet 
 	Pandas magst
+	Findest das "Scott Pilgrim ..." ein guter Film ist
 
