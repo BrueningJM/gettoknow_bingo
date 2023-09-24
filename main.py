@@ -27,18 +27,28 @@ def shuffle(filename):
         rn = np.random.randint(0, licount)
         newline = lines[rn]
         newline = newline.replace("\t", "")
-        newline = str(n+1) + ". " + newline
-        #print(newline)
+
+        print(newline)
+        #print(display)
         if newline in display:
             print(newline)
             continue
+        elif newline == " ":
+            print(newline)
+            continue
         elif newline == "":
+            print(newline)
+            continue
+        elif newline == "\n":
             print(newline)
             continue
         else:
             display.append(newline)
             n += 1
             #print(n)
+    for i in range(0,len(display)):
+        display[i] = str((i+1)) + ". " + display[i]
+
 
     #print(display)
     f = open("Kennenlernen/display.txt", "w")
