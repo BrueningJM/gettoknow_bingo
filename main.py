@@ -126,6 +126,9 @@ disp = display(df)
 root = tk.Tk()
 root.title("Kennlernbingo<3")
 root.geometry("700x1000+650+0")
+foto = tk.PhotoImage(file="Kennenlernen/Unbenannt.PNG")
+root.iconphoto(False,foto)
+
 
 fra = tk.Frame(root)
 fra.pack(fill=tk.BOTH, expand=1)
@@ -197,7 +200,7 @@ def draw_num(path):
 
 def take_input():
     Add = f_input.get()
-    print(Add)
+    #print(Add)
     Add = "	" + Add + "\n"
     f = open(cf,"a")
     f.write(Add)
