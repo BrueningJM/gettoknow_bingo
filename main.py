@@ -5,8 +5,9 @@ import time
 cf = "Kennenlernen/Fragen Kennenlern-Bingo.txt"
 df = "Kennenlernen/display.txt"
 
+blist = "Kennenlernen/Drawn_Numbers.txt"
+
 def display(filename):
-    list = []
     f = open(filename, "r")
     list= f.readlines()
     #print(list)
@@ -14,9 +15,26 @@ def display(filename):
     list = fix_string(list)
     return list
 
+def clear_blacklist(path):
+    f = open(path, "w")
+    f.write("")
+    f.close()
+
+def update_blacklist(path,num):
+    f = open(path, "a")
+    f.write((str(num) +"\n"))
+    f.close()
+
+
+def check_blacklist(path):
+    f = open(path, "r")
+    list = f.readlines()
+    f.close()
+    return list
+
+
 def shuffle(filename):
     display = []
-    lines = []
     f = open(filename,"r")
     lines = f.readlines()
     f.close()
@@ -31,16 +49,16 @@ def shuffle(filename):
         print(newline)
         #print(display)
         if newline in display:
-            print(newline)
+            #print(newline)
             continue
         elif newline == " ":
-            print(newline)
+            #print(newline)
             continue
         elif newline == "":
-            print(newline)
+            #print(newline)
             continue
         elif newline == "\n":
-            print(newline)
+            #print(newline)
             continue
         else:
             display.append(newline)
@@ -48,7 +66,7 @@ def shuffle(filename):
             #print(n)
     for i in range(0,len(display)):
         display[i] = str((i+1)) + ". " + display[i]
-
+    clear_blacklist(blist)
 
     #print(display)
     f = open("Kennenlernen/display.txt", "w")
@@ -125,12 +143,27 @@ frm.grid()
 
 
 
-def draw_num():
+def draw_num(path):
     Numfield = tk.Toplevel(root)
     Numfield.title("Die Nummer ist:")
     Numfield.geometry("600x600+700+250")
     #fra.grid()
+    blist = check_blacklist(path)
+    list = []
+    for m in range(0,len(blist)):
+        blist[m] = blist[m].replace("\n","")
+        list.append(int(blist[m]))
+
     num = np.random.randint(1,51)
+    if len(list) < 50:
+        while num in list:
+            num = np.random.randint(1,51)
+            l =+ 1
+    else:
+        tk.Label(Numfield, text=str("no numbers left"), font=('times', 25)).place(x=50, y=225)
+        return
+
+    #print(blist)
 
     Input = T.get(1.0,'end')
     Input = Input.split("\n")
@@ -149,6 +182,7 @@ def draw_num():
             break
         else:
             continue
+    update_blacklist(path,num)
 
 
     tk.Label(Numfield, text=str(num), font=('times', 70)).place(x=250,y=20)
@@ -180,7 +214,7 @@ tk.Button(frm,
           font=('times', 15)
           ).grid(column=1, row=3, pady=5)
 tk.Button(frm, text="Nummer",
-          command=draw_num,
+          command=lambda: [draw_num(blist)],
           font=('times', 15)
           ).grid(column=2,row=3,pady=5)
 f_input = tk.Entry(frm, width=100)
@@ -189,8 +223,6 @@ tk.Button(frm, text = "  Dazu  ",
           command=take_input,
           font=('times', 15)
           ).grid(column=1,row=5)
-
-
 
 
 root.mainloop()
